@@ -1,0 +1,33 @@
+{
+  "name": "eaplens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "audit": "npm audit --audit-level=high"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjoh5253/eaplens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/zjoh5253/eaplens/issues"
+  },
+  "homepage": "https://github.com/zjoh5253/eaplens#readme",
+  "private": "true",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.1",
+    "@typescript-eslint/parser": "^8.59.1",
+    "eslint": "^10.3.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}
