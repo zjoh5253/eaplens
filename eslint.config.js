@@ -1,21 +1,4 @@
-import tseslint from "@typescript-eslint/eslint-plugin";
-import parser from "@typescript-eslint/parser";
+// eslint-config-next@16 exports a native ESLint flat config array
+import nextConfig from "eslint-config-next";
 
-export default [
-  {
-    files: ["**/*.ts"],
-    languageOptions: {
-      parser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module"
-      }
-    },
-    plugins: {
-      "@typescript-eslint": tseslint
-    },
-    rules: {
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
-    }
-  }
-];
+export default [...nextConfig];
