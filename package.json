@@ -1,33 +1,57 @@
 {
   "name": "eaplens",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "vitest run",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "audit": "npm audit --audit-level=high"
-  },
+  "version": "0.1.0",
+  "description": "B2B SaaS dashboard for HR teams to track EAP utilization and ROI",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zjoh5253/eaplens.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "bugs": {
-    "url": "https://github.com/zjoh5253/eaplens/issues"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "npx tsx prisma/seed.ts",
+    "audit": "npm audit --audit-level=high"
   },
-  "homepage": "https://github.com/zjoh5253/eaplens#readme",
-  "private": "true",
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.7.4",
+    "@prisma/client": "^5.22.0",
+    "@stripe/stripe-js": "^4.9.0",
+    "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "csv-parse": "^5.6.0",
+    "lucide-react": "^0.462.0",
+    "next": "^16.2.6",
+    "next-auth": "^4.24.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.13.3",
+    "stripe": "^17.3.1",
+    "tailwind-merge": "^2.5.4"
+  },
   "devDependencies": {
-    "@types/node": "^25.6.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.59.1",
     "@typescript-eslint/parser": "^8.59.1",
-    "eslint": "^10.3.0",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.5"
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "postcss": "^8.4.49",
+    "prisma": "^5.22.0",
+    "tailwindcss": "^3.4.15",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }
